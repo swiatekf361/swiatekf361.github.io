@@ -5,17 +5,26 @@
 	<title>swiatekf361</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="charset" content="UTF-8">
+	<link rel="stylesheet" href="style.css">
 	<style>
-	body {color-scheme: light dark; font-family: sans-serif}
-	@media (prefers-color-scheme: dark) {body {background-color: #222; color: white;}}
+	
 	</style>
 </head>
 <body>
-	<h1>Something will happen here!</h1>
-	<p>Here you will find some crazy/useless pages and not-so-useful tools.</p>
-	<p>As for now, here's only a placeholder - it won't change soon, but it won't stay like this forever.</p>
-	<p>LRC editing and template literals converter are planned - not useless, but also not useful ideas.</p>
+	<div id="bg"></div>
+	<h1><i>swiatekf361</i>'s page</h1>
+	<p>Here you will find some crazy/random pages and not-so-useful tools.</p>
+	<p>This page acts (almost) like a placeholder but it'll gradually evolve.</p>
 	<hr>
-	<i>swiatekf361 &sdot; 2025 (or 2026)</i>
+	<div id="homescreen">
+	<a href="template-literals" class="icon"><img src="icons/js.png" alt="">Template literals</a>
+	<a href="javascript:alert('not available yet')" class="icon disabled"><img src="icons/lrc.png" alt="">lyricmaster</a>
+	<a href="javascript:alert('hey, it\'s just a placeholder!')" class="icon"><img src="icons/idk.png" alt="">Placeholder</a>
+	<a href="javascript:alert('hey, it\'s just a placeholder!')" class="icon"><img src="icons/idk.png" alt="">Placeholder</a>
+	<a href="javascript:alert('hey, it\'s just a placeholder!')" class="icon"><img src="icons/idk.png" alt="">Placeholder</a>
+	</div>
+	<hr>
+	<i>swiatekf361 &sdot; <span id="year">2025</span></i>
+	<script>document.getElementById("year").innerText = (new Date()).getFullYear();</script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+body {
+	color-scheme: light dark;
+	font-family: sans-serif;
+}
+
+select#language {
+	top: 8px;
+	right: 8px;
+	position: absolute;
+}
+
+div#bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	display: block;
+	z-index: -1;
+	background-color: yellowgreen;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, yellowgreen), color-stop(100%, transparent));
+	background: -webkit-linear-gradient(270deg, yellowgreen, transparent);
+	background: -moz-linear-gradient(270deg, yellowgreen, transparent);
+	background: -o-linear-gradient(270deg, yellowgreen, transparent);
+	background: linear-gradient(to bottom, yellowgreen, transparent);
+}
+
+
+.icon {
+	text-decoration: none;
+	color: inherit;
+	text-align: center;
+	display: inline-block;
+	width: -webkit-calc(20% - 4px);
+	width: calc(20% - 4px);
+	font-size: 17px;
+	padding: 10px 0;
+	transition: 150ms;
+	border-radius: 5px;
+	vertical-align: top;
+}
+
+.icon.disabled {
+	opacity: 0.5;
+}
+
+.icon:hover {
+	background: #7cfc0099;
+}
+
+.icon img {
+	width: 64px;
+	height: 64px;
+	display: block;
+	margin: 0 auto 5px auto;
+}
+
+
+@media (max-width: 600px) {.icon {width: -webkit-calc(25% - 4px); width: calc(25% - 4px);}}
+@media (max-width: 500px) {.icon {width: -webkit-calc(33% - 4px); width: calc(33% - 4px);}}
+@media (max-width: 350px) {.icon {width: -webkit-calc(50% - 4px); width: calc(50% - 4px);}}
+@media (max-width: 200px) {.icon {width: 100%;}}
+
+
+@media (max-width: 450px) {
+	.icon img {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #222;
+		color: white;
+	}
+	div#bg {
+		background-color: green;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, green), color-stop(100%, transparent));
+		background: -webkit-linear-gradient(270deg, green, transparent);
+		background: -moz-linear-gradient(270deg, green, transparent);
+		background: -o-linear-gradient(270deg, green, transparent);
+		background: linear-gradient(to bottom, green, transparent);
+	}
+	.icon:hover {
+		background: #00990077;
+	}
+}
